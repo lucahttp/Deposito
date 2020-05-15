@@ -3,7 +3,7 @@ package domain.lugares;
 
 public class Camino extends CosaQueOcupaUnEspacio {
 
-    Camino(){
+    public Camino(){
         this.tag = "Camino";
     }
 }

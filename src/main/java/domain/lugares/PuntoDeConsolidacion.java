@@ -2,7 +2,7 @@ package domain.lugares;
 
 public class PuntoDeConsolidacion extends CosaQueOcupaUnEspacio {
 
-    PuntoDeConsolidacion(){
+    public PuntoDeConsolidacion(){
         this.tag = "PuntoDeConsolidacion";
     }
 }
