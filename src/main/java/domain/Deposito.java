@@ -12,16 +12,24 @@ import java.util.HashMap;
 public class Deposito {
 
 
-	HashMap<Coordenadas, CosaQueOcupaUnEspacio> lugares;
+	HashMap<String, CosaQueOcupaUnEspacio> lugares;
 
 	public Deposito(){
-		lugares = new HashMap<Coordenadas, CosaQueOcupaUnEspacio>();
+		lugares = new HashMap<String, CosaQueOcupaUnEspacio>();
 	}
 
 
 	public void agregarAlgoAlDeposito(int coordenadaEnX,int coordenadaEnY,CosaQueOcupaUnEspacio algo){
-		lugares.put(new Coordenadas(coordenadaEnX, coordenadaEnY), algo);
+		lugares.put(Coordenadas(coordenadaEnX, coordenadaEnY), algo);
 		System.out.println(lugares.size());
+	}
+
+
+
+
+	private String Coordenadas(int x,int y){
+		//return x + "X" + y + "Y" ;
+		return x + "," + y ;
 	}
 
 }
