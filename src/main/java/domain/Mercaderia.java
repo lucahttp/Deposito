@@ -10,8 +10,8 @@ public class Mercaderia {
 	private String nombre;
 	private int stock;
 
-	public Mercaderia(){
-
+	public Mercaderia(String nombre){
+		this.nombre = nombre;
 	}
 
 	public void finalize() throws Throwable {

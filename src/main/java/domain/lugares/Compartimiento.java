@@ -12,7 +12,7 @@ public class Compartimiento extends CosaQueOcupaUnEspacio {
 
 	private Mercaderia loQueAlmaceno;
 
-	Compartimiento(Mercaderia preducto){
+	public Compartimiento(Mercaderia preducto){
 		this.tag = "Compartimiento";
 		this.loQueAlmaceno = preducto;
 	}
