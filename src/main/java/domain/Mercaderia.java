@@ -14,7 +14,7 @@ public class Mercaderia {
 		this.nombre = nombre;
 	}
 
-	public void finalize() throws Throwable {
-
+	public String queEs(){
+		return this.nombre;
 	}
 }//end Mercaderia

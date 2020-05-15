@@ -12,8 +12,20 @@ public class Compartimiento extends CosaQueOcupaUnEspacio {
 
 	private Mercaderia loQueAlmaceno;
 
-	public Compartimiento(Mercaderia preducto){
+	public Compartimiento(){
 		this.tag = "Compartimiento";
+		this.ocupado = false;
+	}
+
+
+	public void ponerAlgo(Mercaderia preducto){
+
+		System.out.println("se le guardo un "+preducto.queEs());
 		this.loQueAlmaceno = preducto;
+		this.ocupado = true;
+	}
+
+	public boolean tieneAlgo(){
+		return this.ocupado;
 	}
 }//end Compartimiento

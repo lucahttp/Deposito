@@ -19,12 +19,18 @@ public class Deposito {
 	}
 
 
-	public void agregarAlgoAlDeposito(int coordenadaEnX,int coordenadaEnY,CosaQueOcupaUnEspacio algo){
+	public void configurarElDeposito(int coordenadaEnX,int coordenadaEnY,CosaQueOcupaUnEspacio algo){
 		lugares.put(Coordenadas(coordenadaEnX, coordenadaEnY), algo);
 		System.out.println(lugares.size());
 	}
 
 
+
+	public CosaQueOcupaUnEspacio QueHayEnEstaParteDelDeposito(int coordenadaEnX, int coordenadaEnY){
+		CosaQueOcupaUnEspacio loQueEncontro = lugares.get(Coordenadas(coordenadaEnX, coordenadaEnY));
+		System.out.println(loQueEncontro.queTiene());
+		return loQueEncontro;
+	}
 
 
 	private String Coordenadas(int x,int y){
@@ -32,4 +38,9 @@ public class Deposito {
 		return x + "," + y ;
 	}
 
+	public void guardarAlgoElDeposito(int coordenadaEnX, int coordenadaEnY,Mercaderia algoParaGuardar) {
+		CosaQueOcupaUnEspacio loQueEncontro = lugares.get(Coordenadas(coordenadaEnX, coordenadaEnY));
+		System.out.println(loQueEncontro.queTiene());
+		loQueEncontro.ponerAlgo(algoParaGuardar);
+	}
 }

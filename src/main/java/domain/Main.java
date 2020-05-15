@@ -7,8 +7,11 @@ import domain.lugares.PuntoDeConsolidacion;
 public class Main {
     public static void main(String[] args) {
         Deposito myDepo = new Deposito();
-        myDepo.agregarAlgoAlDeposito(0,0,new Compartimiento(new Mercaderia("Donatelo - Tortiga Ninja")));
-        myDepo.agregarAlgoAlDeposito(1,0,new Camino());
-        myDepo.agregarAlgoAlDeposito(0,0,new PuntoDeConsolidacion());
+
+        myDepo.configurarElDeposito(0,0,new Compartimiento());
+        myDepo.guardarAlgoElDeposito(0,0,new Mercaderia("Power Ranger ROJO"));
+        myDepo.configurarElDeposito(1,0,new Camino());
+        myDepo.guardarAlgoElDeposito(1,0,new Mercaderia("Power Ranger ROJO"));
+        myDepo.configurarElDeposito(3,0,new PuntoDeConsolidacion());
     }
 }
