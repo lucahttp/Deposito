@@ -12,7 +12,7 @@ public class Pedido {
 
     public void agregarProducto(String nombreDelProducto,Integer cantidad) {
         pedido.put(nombreDelProducto,cantidad);
-        System.out.println(pedido.size());
+        System.out.println("Tamaño Carrito: "+pedido.size()+"");
     }
 
     public HashMap<String, Integer> queHayEnMiPedido(){
